@@ -24,6 +24,17 @@
   <div>testtesttesttest</div>
 
   <!--<div>test_{{items.title}}_test</div>-->
+  <!--<div *ngFor="let item of items"-->
+       <!--class="search-result" >-->
+    <!--{{item.title}}-->
+  <!--</div>-->
+  {{items?.title}}
+  <div *ngFor="let oitem of items" class="search-result" >
+    {{oitem.id}}
+    {{oitem.title}}
+    {{oitem.img}}
+  </div>
+
   <div *ngFor="let item of mmm"
        class="search-result" >
     {{item.id}}

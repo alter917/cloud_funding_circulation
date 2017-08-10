@@ -33,10 +33,14 @@ export class HelloIonicPage implements OnInit{
     ngOnInit(): void {
         console.log('ngOnInit');
         //console.log("test:" + this.test.getData());
-        this.test.getData().subscribe(
-            items => this.items = items,
-        );
-
+        //this.test.getData().map(items => this.items = items,);
+        this.test.getData().subscribe((items) =>{
+            console.log("test1:" + items);
+            //console.log("test6:" + items['img']);
+            this.items = items;
+        },(error) => {
+            console.log("error come in");
+        });
     }
 
 

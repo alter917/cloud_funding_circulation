@@ -16,14 +16,14 @@ interface Friend {
   selector: 'page-hello-ionic',
   templateUrl: 'hello-ionic.html',
   providers: [
-      CloudFundingItemsServiceProvider // 自作のテストサービスクラス
+      CloudFundingItemsServiceProvider
   ]
 })
 
 export class HelloIonicPage implements OnInit{
     public items: Item[];
     mmm: Friend[] = [
-    { id: 1, "name": "相田", "age": 20 ,"address": "東京都品川区"},
+    { id: 1, "name": "????", "age": 20 ,"address": "??????????"},
     ];
 
   constructor(private test:CloudFundingItemsServiceProvider) {

@@ -8,7 +8,7 @@ import { Item } from '../../providers/cloud-funding-items-service/Item';
     selector: 'page-list',
     templateUrl: 'list.html',
     providers: [
-        CloudFundingItemsServiceProvider // ¼«ºî¤Î¥Æ¥¹¥È¥µ¡¼¥Ó¥¹¥¯¥é¥¹
+        CloudFundingItemsServiceProvider // ï¿½ï¿½ï¿½ï¿½Î¥Æ¥ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Ó¥ï¿½ï¿½ï¿½ï¿½é¥¹
     ]
 })
 export class ListPage {
@@ -38,6 +38,7 @@ export class ListPage {
     }
 
     getData() {
+        this.items = [];
         this.test.getData().subscribe((items) =>{
             //console.log("test2:" + typeof(items));
             //console.log("test3:" + items);

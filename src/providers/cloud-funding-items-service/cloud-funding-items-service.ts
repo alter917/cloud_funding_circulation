@@ -24,14 +24,14 @@ export class CloudFundingItemsServiceProvider {
   }
 
     getData(): Observable<Item[]> {
-        return this.http.get('http://localhost/scraping/test_api.php')
+        return this.http.get('http://ec2-34-233-57-93.compute-1.amazonaws.com/test_api.php')
             //.toPromise()
             .map((response) => {
-                console.log("test2:" + typeof(response));
-                console.log("test3:" + response);
-                var test = response.json();
-                console.log("test4:" + test['id']);
-                console.log("test5:" + response.json()['id']);
+                // console.log("test2:" + typeof(response));
+                // console.log("test3:" + response);
+                // var test = response.json();
+                // console.log("test4:" + test['id']);
+                // console.log("test5:" + response.json()['id']);
                 //return (Item)response.json();
                 return (response.json() as Item[]);
             //response.json().data as Item[]

@@ -8,7 +8,7 @@ import { Item } from '../../providers/cloud-funding-items-service/Item';
     selector: 'page-list',
     templateUrl: 'list.html',
     providers: [
-        CloudFundingItemsServiceProvider // ����Υƥ��ȥ����ӥ����饹
+        CloudFundingItemsServiceProvider
     ]
 })
 export class ListPage {

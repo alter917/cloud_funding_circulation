@@ -23,7 +23,7 @@ interface Friend {
 export class HelloIonicPage implements OnInit{
     public items: Item[];
     mmm: Friend[] = [
-    { id: 1, "name": "????", "age": 20 ,"address": "??????????"},
+    { id: 1, "name": "test_name", "age": 20 ,"address": "test_addres"},
     ];
 
   constructor(private test:CloudFundingItemsServiceProvider) {

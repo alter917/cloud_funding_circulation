@@ -15,9 +15,46 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let item of items">
+    <ion-item *ngFor="let item of items; let idx = index;">
+      <ion-icon name="{{item.icon}}" item-left></ion-icon>
       <ion-label color="primary">Inline Label</ion-label>
-      <ion-input placeholder="Text Input"></ion-input>
+      <ion-input  placeholder="Text Input"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label> ON/OFF Toggle</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>test1</ion-label>
+      <ion-toggle [(ngModel)]="test1" color="danger"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>test2</ion-label>
+      <ion-toggle [(ngModel)]="test2" disabled="true"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>test3</ion-label>
+      <ion-toggle [(ngModel)]="test3" color="secondary"></ion-toggle>
+    </ion-item>
+    <ion-item-sliding #item>
+      <ion-item>
+        右スライド・左スライド
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button (click)="favorite(item)">Favorite</button>
+        <button ion-button color="danger" (click)="share(item)">Share</button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button (click)="unread(item)">Unread</button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item>
+      <ion-label> 詳細画面表示</ion-label>
+      <ion-toggle checked="false" [(ngModel)]="isToggled" (ionChange)="displayDetail()"></ion-toggle>
+    </ion-item>
+
+    <!--左側の「config」はconfig-detailコンポーネントで使用時の名前、右側の「test」はconfigコンポーネントのプロパティ変数-->
+    <config-detail [config]="test"></config-detail>
+
   </ion-list>
 </ion-content>

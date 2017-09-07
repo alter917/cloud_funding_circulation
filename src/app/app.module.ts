@@ -12,6 +12,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {HttpModule} from '@angular/http';
 import {ConfigDetail} from "../pages/config/config-detail";
+import {BookmarkPage} from "../pages/bookmark/bookmark";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ConfigDetail} from "../pages/config/config-detail";
         ItemDetailsPage,
         ListPage,
         ConfigPage,
-        ConfigDetail
+        ConfigDetail,
+        BookmarkPage,
     ],
     imports: [
         BrowserModule,
@@ -34,7 +36,8 @@ import {ConfigDetail} from "../pages/config/config-detail";
         HelloIonicPage,
         ItemDetailsPage,
         ListPage,
-        ConfigPage
+        ConfigPage,
+        BookmarkPage
     ],
     providers: [
         StatusBar,

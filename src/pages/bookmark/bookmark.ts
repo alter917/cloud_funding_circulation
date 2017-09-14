@@ -37,4 +37,12 @@ export class BookmarkPage {
         console.log('ionViewDidLoad BookmarkPage');
     }
 
+    test(id:number, name:string, checked:boolean) {
+        console.log("this here");
+         console.log("test id:" + id);
+         console.log("test name:" + name);
+        console.log("test checked:" + checked);
+
+    }
+
 }

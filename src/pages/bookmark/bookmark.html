@@ -19,7 +19,10 @@
     <ion-item *ngFor="let book of bookItems; let idx = index;">
       <ion-label>タイトル:{{book.title}}</ion-label>
       <!--<ion-checkbox value="book.id"></ion-checkbox>-->
-      <ion-checkbox color="dark" checked="false"></ion-checkbox>
+      <!--どうやら文字列結合は普通に+でいいみたい-->
+      <!--属性（attribute）に値をngforのindex値を入れる場合は特に{{}}無くていいみたい-->
+      <!--<ion-checkbox [attr.name]="'check' + idx" color="dark" checked="false"></ion-checkbox>-->
+      <ion-checkbox #chk [id]="'check' + idx" [attr.name]="'check' + idx" color="dark" checked="false"  (ionChange)="test(chk.id,chk.name,chk.checked)"></ion-checkbox>
     </ion-item>
 
 
